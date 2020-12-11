@@ -1,6 +1,6 @@
 const fs = require('fs');
 
-const data = fs.readFileSync('./Day9/data.txt', 'utf-8').split('\n').map(num => Number(num));
+const data = fs.readFileSync('./Day01001/data.txt', 'utf-8').split('\n').map(num => Number(num));
 
 // Part One - The first step of attacking the weakness in the XMAS data is to find the first number in the list (after the preamble) which is not the sum of two of the 25 numbers before it. 
 

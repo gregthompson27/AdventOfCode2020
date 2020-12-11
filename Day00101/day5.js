@@ -1,6 +1,6 @@
 const fs = require('fs');
 
-const data = fs.readFileSync('./Day5/data.txt', 'utf-8').split('\n');
+const data = fs.readFileSync('./Day00101/data.txt', 'utf-8').split('\n');
 
 console.log(data[0].slice(0, -2));
 

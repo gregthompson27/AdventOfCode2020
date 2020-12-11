@@ -1,6 +1,6 @@
 const fs = require('fs');
 
-const data = fs.readFileSync('./Day2/data.txt', 'utf-8').split('\n');
+const data = fs.readFileSync('./Day00010/data.txt', 'utf-8').split('\n');
 
 const test1 = data.map(a => {
   const min = a.slice(0, a.indexOf('-'));

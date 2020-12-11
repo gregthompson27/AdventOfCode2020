@@ -2,7 +2,7 @@ const fs = require('fs');
 const { connected } = require('process');
 
 
-const passportData = fs.readFileSync('./Day4/data.txt', 'utf-8')
+const passportData = fs.readFileSync('./Day00100/data.txt', 'utf-8')
   .split('\n\n')
   .map(doc => {
     return doc

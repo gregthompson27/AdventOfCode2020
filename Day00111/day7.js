@@ -1,8 +1,8 @@
 const fs = require('fs');
 
-const allData = fs.readFileSync('./Day7/data.txt', 'utf-8').split('\n');
+const allData = fs.readFileSync('./Day00111/data.txt', 'utf-8').split('\n');
 
-const data = fs.readFileSync('./Day7/data.txt', 'utf-8')
+const data = fs.readFileSync('./Day00111/data.txt', 'utf-8')
   .split('\n')
   .map(rule => rule.split(' bags contain '))
 
