@@ -1,8 +1,8 @@
 const fs = require('fs');
-const data = fs.readFileSync('./Day10/data.txt', 'utf-8')
+const data = fs.readFileSync('./Day01010/data.txt', 'utf-8')
   .split('\n')
-  .sort((a, b) => a - b)
-  .map(num => Number(num));
+  .map(num => Number(num))
+  .sort((a, b) => a - b);
 
 // Part One - What is the number of 1-jolt differences multiplied by the number of 3-jolt differences?
 
@@ -15,9 +15,22 @@ const partOne = () => {
     if (data[i + 1] - data[i] === 1) { oneCount++; }
     if (data[i + 1] - data[i] === 3) { threeCount++; }
   }
-  return [oneCount, threeCount + 1];
+  return oneCount * (threeCount + 1);
 }
 
+console.log(partOne())
 
+// Part Two - What is the total number of distinct ways you can arrange the adapters to connect the charging outlet to your device?
 
-console.log(partOne()[0] * partOne()[1])
+const partTwo = () => {
+  const diffsFunc = (accumulator, num, i, all) => (!i ? [num] : [...accumulator, num - all[i - 1]]);
+  const tribonacciSequence = [1, 2, 4, 7];
+  const results = data
+    .reduce(diffsFunc, [])
+    .join('')
+    .match(/1+/g)
+    .reduce((a, { length }) => a * tribonacciSequence[length - 1], 1)
+    return results;
+}
+
+console.log(partTwo())
